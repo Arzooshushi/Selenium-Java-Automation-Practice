@@ -1,0 +1,22 @@
+# Java / Maven build files
+/target/
+/bin/
+*.class
+
+# Eclipse local configuration
+.project
+.classpath
+.settings/
+.metadata/
+
+# IntelliJ / VS Code
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test artifacts / logs
+*.log
