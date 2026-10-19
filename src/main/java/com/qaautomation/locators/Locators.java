@@ -1,4 +1,5 @@
 package com.qaautomation.locators;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,7 @@ public class Locators {
     public static void main(String[] args) {
 
         WebDriver driver = new ChromeDriver();
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://rahulshettyacademy.com/locatorspractice/");
 
         // Username using ID
@@ -23,5 +24,8 @@ public class Locators {
         // Sign In using Class Name
         driver.findElement(By.className("signInBtn"))
               .click();
+        System.out.println(
+    driver.findElement(By.cssSelector("p.error")).getText()
+);  
     }
 }
